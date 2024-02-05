@@ -73,7 +73,7 @@ jobs:
          context: ./
 
 
-   DeployToEKS:
+    DeployToEKS:
      needs: BUILD_AND_PUBLISH
      runs-on: ubuntu-latest
      steps:
