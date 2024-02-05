@@ -88,7 +88,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Get Kube config file
-        run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ secrets.REGISTRY}} --docker-password=$(aws ecr get-login-password)
+        run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER}}
 
       - name: Print config file
         run: cat ~/.kube/config
